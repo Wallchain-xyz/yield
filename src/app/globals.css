@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --theme-bg-color: var(--tg-theme-bg-color);
+  --theme-text-color: var(--tg-theme-text-color);
+  --theme-hint-color: var(--tg-theme-hint-color);
+  --theme-link-color: var(--tg-theme-link-color);
+  --theme-button-color: var(--tg-theme-button-color);
+  --theme-button-text-color: var(--tg-theme-button-text-color);
+  --theme-secondary-bg-color: var(--tg-theme-secondary-bg-color);
+  --viewport-height: var(--tg-viewport-height);
+  --viewport-stable-height: var(--tg-viewport-stable-height);
+  --theme-border-radius: 10px;
+  --theme-error-color: var(--tg-theme-destructive-text-color);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: var(--viewport-height);
+  transition: height 0.1s linear;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,98 @@
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  perspective: 100vw;
+  left: 0;
+  top: 0;
+}
+
+.background {
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  animation: move-camera 10s infinite;
+  transform: rotate3d(0, 1, 0, 0deg) translate3d(-50%, -50%, -95vw);
+}
+
+.backgroundImage {
+  width: 110vw;
+  height: 110vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(2);
+}
+
+.mascot {
+  position: absolute;
+  height: 60vh;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-40%) translateY(-50%) translateZ(200vh);
+}
+
+.mascot::after {
+  position: absolute;
+  content: '';
+  width: 20vh;
+  height: 10vh;
+  background-color: black;
+  opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-40%) translateY(-50%) translateZ(200vh);
+}
+
+@keyframes move-camera {
+  0% {
+    transform: rotate3d(0, 1, 0, var(--camera-move-angle)) translate3d(-50%, -50%, -95vw);
+  }
+
+  33.333% {
+    transform: rotate3d(1, 1, 0, var(--camera-move-angle)) translate3d(-50%, -50%, -95vw);
+  }
+
+  66.666% {
+    transform: rotate3d(0, 1, 1, var(--camera-move-angle)) translate3d(-50%, -50%, -95vw);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, var(--camera-move-angle)) translate3d(-50%, -50%, -95vw);
+  }
+}
+
+.sakura {
+  position: absolute;
+  inset: 0;
+}
+
+@media (width <= 640px) {
+  .main {
+    --font-size: 18px;
+  }
+
+  .searchButton {
+    width: 72px;
+  }
+
+  .input {
+    width: calc(100% - 72px);
+  }
+
+  .sakura {
+    left: -50vh;
+    right: -50vh;
+  }
+
+  .backgroundImage {
+    width: auto;
+    left: -80%;
+  }
+
+  .mascot {
+    top: 42.5%;
+  }
+}

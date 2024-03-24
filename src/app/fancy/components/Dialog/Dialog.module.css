@@ -1,0 +1,71 @@
+.dialogContainer {
+  width: calc(100% - 32px);
+  max-width: 640px;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dcf9ff;
+  border: 8px solid #0f5368;
+  box-sizing: border-box;
+  height: 320px;
+  font-family: monospace;
+  padding: 12px;
+  color: #0f5368;
+  font-size: var(--font-size);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputContainer {
+  border-top: 8px solid #0f5368;
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  padding: 8px 16px 0;
+  box-sizing: border-box;
+}
+
+.input {
+  width: calc(100% - 128px);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--font-size);
+  font-family: monospace;
+  color: #0f5368;
+  font-weight: 700;
+}
+
+.searchButton {
+  width: 128px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--font-size);
+  font-family: monospace;
+  color: #0f5368;
+  font-weight: 700;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+  color: #dcf9ff;
+  background-color: #0f5368;
+}
+
+.appearingText {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+@media (width <= 640px) {
+  .searchButton {
+    width: 72px;
+  }
+
+  .input {
+    width: calc(100% - 72px);
+  }
+}

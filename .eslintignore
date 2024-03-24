@@ -1,0 +1,7 @@
+!.*
+.next
+out
+
+cli/ui-tests/viewer
+
+node_modules

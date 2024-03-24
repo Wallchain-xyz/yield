@@ -1,0 +1,14 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  --camera-move-angle: 0.2deg;
+  --font-size: 22px;
+}
+
+@media (width >= 640px) {
+  .main {
+    --font-size: 18px;
+  }
+}
